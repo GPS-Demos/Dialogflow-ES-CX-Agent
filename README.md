@@ -5,8 +5,8 @@ This tutorial covers an end to end solution on how to create a sample Dialogflow
 
 Here are the main steps covered in this tutorial:
 
--Create a conversation script
--Create a simple agent with 1 flow. 
+*Create a conversation script
+*Create a simple agent with 1 flow. 
 -Create Internets, Parameters and Entities
 -Create Webhooks and connect to the agent
 -Embed the agent to a website
