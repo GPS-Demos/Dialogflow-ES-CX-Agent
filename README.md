@@ -159,6 +159,63 @@ We  will create a Cloud Function in the same project where our agent is built. T
 Now that we have a working agent, you can embed the agent into your existing website. To do so in the Dialogflow CS interface navigate to the Integrations and click Connect in the Dialogflow Messenger box. Copy the provided code and paste it in your website where you want the chatbot agent to appear. 
 
 
+## Creating platform specific dialogs
+
+### Rich messages in Dialogflow Messenger
+
+The Dialogflow Messenger supports text responses for basic agent responses and uses custom payloads for rich responses. We will create a rich response message that displays an image of a renewal notice in Dialogflow Messenger. Walk through the steps below to set this up.
+
+1. Select the renewal payment flow.
+
+2. Select the renewal notice page
+
+3. Click in the Entry fulfillment dialog box to bring up the fulfillment pane. The image below shows the dialog already populated but the first time you do this it will be empty.
+
+
+4. Click on the add dialog option link and select custom payload
+
+
+5. Enter the SSML snippet below into the Agent Says dialogue box
+
+		{
+		  "richContent": [
+		    [
+		      {
+			"rawUrl": "https://dor.mo.gov/img/renewalnotice.gif",
+			"accessibilityText": "Renewal Notice",
+			"type": "image"
+		      }
+		    ]
+		  ]
+		}
+
+6. Click Save to persist your changes
+
+
+In this example we are creating rich response messages for Dialogflow Messenger using the custom payload format. The image at the url specified in the custom payload will be displayed in Dialogflow Messenger.
+
+
+
+### SSML example for the Phone Gateway
+
+You can use the Speech Synthesis Markup Language (SSML) in your Phone Gateway responses to make them seem more like natural speech.
+In the example below, we will use SSML to ensure that the telephone number is spoken as a sequence of characters rather than an ordinal.
+
+1.  Select the renewal payment flow.
+
+2 Select the renewal phone page
+
+3. Click in the Entry fulfillment dialog box to bring up the fulfillment pane. The image below shows the dialog already populated but the first time you do this it will be empty.
+
+4. Enter the SSML snippet below into the Agent Says dialogue box
+
+		<speak>That's <say-as interpret-as="characters">2123451234</say-as>. Okay, I am pulling up your account information now. I see that you have current insurance information on file, and can therefore renew your registration using our virtual DMV System. Can you confirm your address is still 343 State Street , Rochester, New York? </speak>
+
+5. Click Save to persist your changes
+
+In this example we are using the say-as element in combination with the interpret-as attribute to ensure that the virtual agent speaks the phone number as a sequence of characters rather than as a cardinal number.
+
+
 
 
 
