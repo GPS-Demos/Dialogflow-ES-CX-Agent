@@ -14,25 +14,25 @@ Here are the main steps covered in this tutorial:
 
 Before we create an agent we would need to create a sample scenario with which an end-user will interact with the agent. In this case, the end user is trying to find the closest DMV location. After we create the agent we can test it using the script. And example script for this conversation can be the following: 
 
-**Caller: **
+		**Caller: **
 
-I’m looking for the nearest DMV office
+		I’m looking for the nearest DMV office
 
-**Agent:**
+		**Agent:**
 
-Sure, I can help you with that.  What is your zip code?
+		Sure, I can help you with that.  What is your zip code?
 
-**Caller:**
+		**Caller:**
 
-My zip code is 64114.
+		My zip code is 64114.
 
-**Agent:**
+		**Agent:**
 
-The closest DMV office is Santa Clara DMV. It is located at 3665 Flora Vista Ave, Santa Clara, CA 95051, United States. Is there anything else I can help you with?
+		The closest DMV office is Santa Clara DMV. It is located at 3665 Flora Vista Ave, Santa Clara, CA 95051, United States. Is there anything else I can help you with?
 
-**Caller:**
+		**Caller:**
 
-No, thank you!
+		No, thank you!
 
 ## Create a static Agent
 
@@ -61,38 +61,38 @@ No, thank you!
 
 7. Similarly create 2 more intents. Create an intent called zip.code and add the following phrases. Here we can see the highlighted zip codes. Those are parameters. 	
 
-	my zip is 87645
+		my zip is 87645
 
-	my zip 93423
+		my zip 93423
 
-	87634
+		87634
 
-	Here is my zip code 98623
+		Here is my zip code 98623
 
-	zip 45321
+		zip 45321
 
-	My zip code is 98432
+		My zip code is 98432
 
 
 8. Create parameters for this Intent. For this scenario we create a new parameter called zip_code.  To convert the entered zip codes into parameters, click on or highlight the zip code and select the entity @sys.zip-code from the list. Repeat this process for each training phrase. 
 
 9. Now create Intent called end.call and add the phrases
 
-	I'm good thanks
+		I'm good thanks
 
-	all good
+		all good
 
-	that's all
+		that's all
 
-	that'll be all
+		that'll be all
 
-	no thanks
+		no thanks
 
-	no thank you
+		no thank you
 
-	no
+		no
 
-	nothing
+		nothing
 
 
 10. Now that we have our Intents, Entities and Parameters, we can start building the agent. Click on the Build menu at the top. At this point we have our Start page which was created by default. Now we can create additional pages.
