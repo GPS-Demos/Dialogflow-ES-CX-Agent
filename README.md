@@ -43,56 +43,56 @@ No, thank you!
 5. Now let’s create some intents.  To create an Intent click on Manage, then Intents, then Create. By default we have Default Welcome Intent and Default Negative Intent. The Default Welcome Intent is matched when the end-user starts a conversation. You can modify it as needed.  
 6. Create a new Intent called closest.dmv.office.  In the Training Phrases section add the following phrases. Click Save
 
-I'd like to find a dmv office close to my house
+		I'd like to find a dmv office close to my house
 
-where is the dmv office
+		where is the dmv office
 
-nearest dmv office
+		nearest dmv office
 
-Closest dmv office
+		Closest dmv office
 
-where is the nearest dmv office?
+		where is the nearest dmv office?
 
-where is the closets dmv office?
+		where is the closets dmv office?
 
-I'm looking for the nearest dmv office
+		I'm looking for the nearest dmv office
 
-I'm looking for the dmv office
+		I'm looking for the dmv office
 
 7. Similarly create 2 more intents. Create an intent called zip.code and add the following phrases. Here we can see the highlighted zip codes. Those are parameters. 	
 
-my zip is 87645
+	my zip is 87645
 
-my zip 93423
+	my zip 93423
 
-87634
+	87634
 
-Here is my zip code 98623
+	Here is my zip code 98623
 
-zip 45321
+	zip 45321
 
-My zip code is 98432
+	My zip code is 98432
 
 
 8. Create parameters for this Intent. For this scenario we create a new parameter called zip_code.  To convert the entered zip codes into parameters, click on or highlight the zip code and select the entity @sys.zip-code from the list. Repeat this process for each training phrase. 
 
 9. Now create Intent called end.call and add the phrases
 
-I'm good thanks
+	I'm good thanks
 
-all good
+	all good
 
-that's all
+	that's all
 
-that'll be all
+	that'll be all
 
-no thanks
+	no thanks
 
-no thank you
+	no thank you
 
-no
+	no
 
-nothing
+	nothing
 
 
 10. Now that we have our Intents, Entities and Parameters, we can start building the agent. Click on the Build menu at the top. At this point we have our Start page which was created by default. Now we can create additional pages.
