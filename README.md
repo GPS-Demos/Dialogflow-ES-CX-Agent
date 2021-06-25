@@ -6,9 +6,9 @@ Here are the main steps covered in this tutorial:
 
 * Create a conversation script
 * Create a simple agent with 1 flow 
-- Create Internets, Parameters and Entities
-- Create Webhooks and connect to the agent
-- Embed the agent to a website
+* Create Internets, Parameters and Entities
+* Create Webhooks and connect to the agent
+* Embed the agent to a website
 
 ## Agent conversation Script
 
@@ -101,7 +101,6 @@ Before we create an agent we would need to create a sample scenario with which a
 
 12. Now we can create Routes. Click on the Start Page and Add a Route
 	
-
 13. First, you need to select an Intent or a Condition for a given route. In this case, select closest.dmv.office as the intent.
 
 14. Go to the end of the page and select the next page which will follow the Start page, In this case it’s the page DMV Location. Click Save.
@@ -113,7 +112,7 @@ Before we create an agent we would need to create a sample scenario with which a
 17. Similar to the previous steps, click on the DMV Location page and Add a new Route. Select zip.code as the intent and Zip Code page as a transition page. Leave everything else as it is. Click Save.  
 
 18. Click on the Zip Code page and Edit Fulfillment. In the Agent says section add the following message “ The closest DMV office is Santa Clara DMV. It is located at 3665 Flora Vista Ave, Santa Clara, CA 95051, United States. Is there anything else I can help you with?”
- -	 In the next section we will remove this message and connect a webhook to this page. The fulfillment message will be called directly from the webhook. 
+	 -	 In the next section we will remove this message and connect a webhook to this page. The fulfillment message will be called directly from the webhook. 
 19. In the same way click on the Zip Code and add a route. Select end.call as the intent and End Call as the page. Click Save. 
 20. Click on the End Call page and add the following fulfillment message in the Agent says section. “Ok Have a nice day!”. 
 
@@ -151,7 +150,7 @@ We  will create a Cloud Function in the same project where our agent is built. T
 12. Now go back to the Dialogflow agent. Click on Webhooks, and Create New.
 13. Add dmv_location as the Display name . Paste the Trigger URL copied in the previous step into the Webhook URL field. Leave other fields as default.  Click Save.
 14. Go back to the Build section and click on the Zip Code page.  Edit Fulfillment. 
-15 Remove the message under the Agent says field. Scroll down and check the Use Webhook checkbox. Then select the webhook dmv_location and create a Tag. Click Save. 
+15. Remove the message under the Agent says field. Scroll down and check the Use Webhook checkbox. Then select the webhook dmv_location and create a Tag. Click Save. 
 16. Now test the agent again. This time when the agent asks for a zip code, provide any valid zip code. And the agent will find the nearest DMV office and return the address.
 
 ## Embed the agent in a website
@@ -203,7 +202,7 @@ In the example below, we will use SSML to ensure that the telephone number is sp
 
 1.  Select the renewal payment flow.
 
-2 Select the renewal phone page
+2. Select the renewal phone page
 
 3. Click in the Entry fulfillment dialog box to bring up the fulfillment pane. The image below shows the dialog already populated but the first time you do this it will be empty.
 
