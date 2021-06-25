@@ -15,14 +15,23 @@ Here are the main steps covered in this tutorial:
 Before we create an agent we would need to create a sample scenario with which an end-user will interact with the agent. In this case, the end user is trying to find the closest DMV location. After we create the agent we can test it using the script. And example script for this conversation can be the following: 
 
 **Caller: **
+
 I’m looking for the nearest DMV office
+
 **Agent:**
+
 Sure, I can help you with that.  What is your zip code?
+
 **Caller:**
+
 My zip code is 64114.
+
 **Agent:**
+
 The closest DMV office is Santa Clara DMV. It is located at 3665 Flora Vista Ave, Santa Clara, CA 95051, United States. Is there anything else I can help you with?
+
 **Caller:**
+
 No, thank you!
 
 ## Create a static Agent
@@ -35,20 +44,33 @@ No, thank you!
 6. Create a new Intent called closest.dmv.office.  In the Training Phrases section add the following phrases. Click Save
 
 I'd like to find a dmv office close to my house
+
 where is the dmv office
+
 nearest dmv office
+
 Closest dmv office
+
 where is the nearest dmv office?
+
 where is the closets dmv office?
+
 I'm looking for the nearest dmv office
+
 I'm looking for the dmv office
 
 7. Similarly create 2 more intents. Create an intent called zip.code and add the following phrases. Here we can see the highlighted zip codes. Those are parameters. 	
+
 my zip is 87645
+
 my zip 93423
+
 87634
+
 Here is my zip code 98623
+
 zip 45321
+
 My zip code is 98432
 
 
@@ -57,12 +79,19 @@ My zip code is 98432
 9. Now create Intent called end.call and add the phrases
 
 I'm good thanks
+
 all good
+
 that's all
+
 that'll be all
+
 no thanks
+
 no thank you
+
 no
+
 nothing
 
 
@@ -84,7 +113,7 @@ nothing
 17. Similar to the previous steps, click on the DMV Location page and Add a new Route. Select zip.code as the intent and Zip Code page as a transition page. Leave everything else as it is. Click Save.  
 
 18. Click on the Zip Code page and Edit Fulfillment. In the Agent says section add the following message “ The closest DMV office is Santa Clara DMV. It is located at 3665 Flora Vista Ave, Santa Clara, CA 95051, United States. Is there anything else I can help you with?”
- - In the next section we will remove this message and connect a webhook to this page. The fulfillment message will be called directly from the webhook. 
+ -	 In the next section we will remove this message and connect a webhook to this page. The fulfillment message will be called directly from the webhook. 
 19. In the same way click on the Zip Code and add a route. Select end.call as the intent and End Call as the page. Click Save. 
 20. Click on the End Call page and add the following fulfillment message in the Agent says section. “Ok Have a nice day!”. 
 
